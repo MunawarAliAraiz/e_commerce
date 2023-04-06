@@ -42,3 +42,5 @@ const itemDetailButtonList = [
   returnpolicy,
   supportpolicy
 ];
+const profileButtonList = [orders, wishlist, messages];
+const profileButtonIcons = [icOrder, icOrder, icMessages];
