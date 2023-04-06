@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 const appname = "E-Cart";
 const appversion = "Version 1.0.0";
 const credits = "@Munawar";
@@ -18,9 +16,10 @@ const retypePass = "Retype Password";
 const termCond = "Terms and Conditions";
 const privacyPol = "Privacy Policy";
 const alrHavAcc = "Already have an account? ";
+const categories = "Categories";
 
 //Home Strings
-const home = "Home"; const category = "Category"; const cart = "Cart"; const account = "Account";
+const home = "Home", category = "Category", cart = "Cart", account = "Account";
 
 //Home Screen Strings
 const searchAnyThing = "Search Anything ....",
@@ -35,6 +34,19 @@ mobilePhone = "Mobile Phones",
 girlWatches = "Girls Watches",
 boysGlasses = "Boys Glasses",
 tShirts = "T Shirts",
-sports = "Sports",
+girlDress = "Girl Dress",
 featuredProducts = "Featured Products";
+
+
+// Categories Screen
+const tools = "Hardware Tools",
+menClothingFashion = "Men Clothing & Fashion",
+compAcc = "Computer & Accessories",
+automobile = "Automobile",
+kidsToys = "Kids & Toys",
+sports = "Sports",
+cosmetics = "Cosmetics",
+cellphone = "Cellphone & Tab",
+furniture = "Furniture";
+
 
