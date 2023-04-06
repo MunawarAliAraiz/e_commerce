@@ -12,6 +12,33 @@ const featuredImages2 = [imgS4, imgS5, imgS6];
 const featuredTitles1 = [womenDress, mobilePhone, girlWatches];
 const featuredTitles2 = [tShirts, boysGlasses, sports];
 
-const categoriesList = [menClothingFashion, compAcc, automobile,
-kidsToys, sports, cellphone, cosmetics, tools, furniture ];
-const categoriesImages = [imgFc1,imgFc2,imgFc3,imgFc4,imgFc5,imgFc6,imgFc7,imgFc8,imgFc9];
+const categoriesList = [
+  menClothingFashion,
+  compAcc,
+  automobile,
+  kidsToys,
+  sports,
+  cellphone,
+  cosmetics,
+  tools,
+  furniture
+];
+const categoriesImages = [
+  imgFc1,
+  imgFc2,
+  imgFc3,
+  imgFc4,
+  imgFc5,
+  imgFc6,
+  imgFc7,
+  imgFc8,
+  imgFc9
+];
+
+const itemDetailButtonList = [
+  video,
+  reviews,
+  sellerpolicy,
+  returnpolicy,
+  supportpolicy
+];
