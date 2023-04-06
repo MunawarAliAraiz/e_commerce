@@ -8,5 +8,5 @@ Widget homeButtons({height, width, icon, String? title, onPress}){
       10.heightBox,
       title!.text.fontFamily(semibold).color(darkFontGrey).make()
     ],
-  ).box.rounded.white.size(width, height).shadow3xl.make();
+  ).box.white.rounded.white.size(width, height).shadow3xl.make();
 }

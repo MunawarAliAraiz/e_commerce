@@ -23,11 +23,18 @@ const alrHavAcc = "Already have an account? ";
 const home = "Home"; const category = "Category"; const cart = "Cart"; const account = "Account";
 
 //Home Screen Strings
-const searchAnyThing = "Search Anything ....";
-const todayDeal = "Today's Deal";
-const flashSale = "Flash Sale";
-const topSellers = "Top Sellers";
-const brands = "Brands";
-const featCategory = "Feature Categories";
-const topCategory = "Top Categories";
+const searchAnyThing = "Search Anything ....",
+todayDeal = "Today's Deal",
+flashSale = "Flash Sale",
+topSellers = "Top Sellers",
+brands = "Brands",
+featCategory = "Feature Categories",
+topCategory = "Top Categories",
+womenDress = "Women Dress",
+mobilePhone = "Mobile Phones",
+girlWatches = "Girls Watches",
+boysGlasses = "Boys Glasses",
+tShirts = "T Shirts",
+sports = "Sports",
+featuredProducts = "Featured Products";
 
