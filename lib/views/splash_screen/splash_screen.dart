@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
             10.heightBox,
             appname.text.fontFamily(bold).size(22).white.make(),
             appversion.text.white.make(),
-            Spacer(),
+            const Spacer(),
             credits.text.white.make(),
             30.heightBox,
             // Splash Screen Created

@@ -7,5 +7,5 @@ Widget featuredButtons({String? title, icon}){
       10.widthBox,
       title!.text.fontFamily(semibold).color(darkFontGrey).make()
     ],
-  ).box.width(200).margin(EdgeInsets.symmetric(horizontal: 4)).white.padding(EdgeInsets.all(8)).rounded.shadow.make();
+  ).box.width(200).margin(const EdgeInsets.symmetric(horizontal: 4)).white.padding(const EdgeInsets.all(8)).rounded.shadow.make();
 }

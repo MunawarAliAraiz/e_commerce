@@ -7,6 +7,7 @@ const password = "Password";
 const passwordHint = "*****";
 const forgetPass = "Forget Password";
 const login = "Log in";
+const logout = "Log out";
 const signup = "Sign up";
 const createNewAccount = "or, create a new account";
 const loginWith = "Log in with";
@@ -16,6 +17,8 @@ const retypePass = "Retype Password";
 const termCond = "Terms and Conditions";
 const privacyPol = "Privacy Policy";
 const alrHavAcc = "Already have an account? ";
+const loggedin = "Logged in successfully";
+const loggedout = "Logged out successfully";
 const categories = "Categories";
 
 //Home Strings

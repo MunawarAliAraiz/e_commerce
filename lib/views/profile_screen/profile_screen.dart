@@ -1,6 +1,9 @@
 import 'package:e_commerce/consts/consts.dart';
 import 'package:e_commerce/consts/lists.dart';
+import 'package:e_commerce/controllers/auth_controller.dart';
+import 'package:e_commerce/views/auth_screen/login_screen.dart';
 import 'package:e_commerce/widgets_common/bg_widget.dart';
+import 'package:get/get.dart';
 import 'components/details_card.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -28,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
               children: [
-                Image.asset(imgProfile2, width: 130, fit: BoxFit.cover)
+                Image.asset(imgProfile2, width: 80, fit: BoxFit.cover)
                     .box
                     .roundedFull
                     .clip(Clip.antiAlias)
@@ -47,8 +50,11 @@ class ProfileScreen extends StatelessWidget {
                         side: const BorderSide(
                       color: whiteColor,
                     )),
-                    onPressed: () {},
-                    child: login.text.fontFamily(semibold).white.make()),
+                    onPressed: () async {
+                      await Get.put(AuthController()).signoutMethod(context);
+                      Get.offAll(()=> const LoginScreen());
+                    },
+                    child: logout.text.fontFamily(semibold).white.make()),
               ],
             ),
           ),

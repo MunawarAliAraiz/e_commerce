@@ -1,9 +1,6 @@
 import 'package:e_commerce/consts/consts.dart';
 import 'package:e_commerce/consts/lists.dart';
 import 'package:e_commerce/widgets_common/our_button.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:get/get.dart';
 
 class ItemDetail extends StatelessWidget {
   final String? title;

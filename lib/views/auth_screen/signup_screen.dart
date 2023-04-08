@@ -1,3 +1,5 @@
+import 'package:e_commerce/controllers/auth_controller.dart';
+import 'package:e_commerce/views/home_screen/home.dart';
 import 'package:get/get.dart';
 import '../../consts/consts.dart';
 import '../../widgets_common/applogo_widget.dart';
@@ -15,6 +17,13 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
 
   bool? isCheck = false;
+  var controller = Get.put(AuthController());
+
+  //text controllers
+  var nameController = TextEditingController();
+  var emailController = TextEditingController();
+  var passwordController = TextEditingController();
+  var passwordRetypeController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +39,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             15.heightBox,
             Column(
               children: [
-                customTextFeild(hint: nameHint, title: name),
-                customTextFeild(hint: emailHint, title: email),
-                customTextFeild(hint: passwordHint, title: password),
-                customTextFeild(hint: passwordHint, title: retypePass),
+                customTextFeild(hint: nameHint, title: name, controller: nameController, isPass: false),
+                customTextFeild(hint: emailHint, title: email, controller: emailController, isPass: false),
+                customTextFeild(hint: passwordHint, title: password, controller: passwordController, isPass: true),
+                customTextFeild(hint: passwordHint, title: retypePass, controller: passwordRetypeController, isPass: true),
                 // Align(
                 //   alignment: Alignment.centerRight,
                 //   child:TextButton(onPressed: (){}, child: forgetPass.text.make())
@@ -71,7 +80,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     )
                   ],
                 ),
-                ourButton(title: signup, color: isCheck == true ? redColor : lightGrey, textColor: whiteColor, onPress: (){}).box.width(context.screenWidth - 50).make(),
+                ourButton(title: signup, color: isCheck == true ? redColor : lightGrey, textColor: whiteColor, onPress: () async {
+                  if (isCheck != null) {
+                    try {
+                      print("Check 1");
+                    await controller.signupMethod(context: context, email: emailController.text, password: passwordController.text).then((value){
+                      print("Check 2");
+                      return controller.storeUserData(
+                        email: emailController.text,
+                        password: passwordController.text,
+                        name: nameController.text
+                      );
+                    }).then((value){
+                      print("Check 3");
+                      VxToast.show(context, msg: loggedin);
+                      print("1");
+                      Get.offAll(()=> const Home());
+                    });
+                    } catch (e) {
+                      auth.signOut();
+                      VxToast.show(context, msg: "Failed 123");
+                    }
+                  }
+                }).box.width(context.screenWidth - 50).make(),
                 5.heightBox,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -83,7 +114,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   Get.back();
                 }),
               ],
-            ).box.white.rounded.padding(EdgeInsets.all(16)).width(context.screenWidth-70).shadowSm.make(),
+            ).box.white.rounded.padding(const EdgeInsets.all(16)).width(context.screenWidth-70).shadowSm.make(),
           ],
         ),
       ),
